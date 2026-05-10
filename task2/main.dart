@@ -8,7 +8,6 @@ void main() {
 
   int studentsCount = int.parse(stdin.readLineSync()!);
 
-  // Input Students
   for (int i = 0; i < studentsCount; i++) {
     print("\nEnter student name:");
 
@@ -33,7 +32,6 @@ void main() {
     studentGrades.add(grades);
   }
 
-  // Infinite Menu
   while (true) {
     print("                     ");
     print("\n===== MENU =====");
@@ -43,7 +41,6 @@ void main() {
 
     int choice = int.parse(stdin.readLineSync()!);
 
-    // Show All Results
     if (choice == 1) {
       for (int i = 0; i < studentNames.length; i++) {
         double average =
@@ -66,7 +63,6 @@ void main() {
         print("Grade: $gradeLetter");
       }
     }
-    // Search Student
     else if (choice == 2) {
       print("Enter student name:");
 
@@ -85,12 +81,12 @@ void main() {
         print("Student not found");
       }
     }
-    // Exit
+
     else if (choice == 3) {
       print("Program Ended");
       break;
     }
-    // Invalid Input
+
     else {
       print("Invalid Choice");
     }
